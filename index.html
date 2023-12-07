@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Jakarta+Sans:wght@300;400;500;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="scss/style.css" />
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <!-- Nav Bar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h1>designlake.</h1>
+        </div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+        </ul>
+        <div class="cv-cntnr">
+            <button class="btn">Download CV <i class="ri-download-line">
+                    <div class="parallelogram-1"></div>
+                    <div class="parallelogram-2"></div>
+                    <span></span>
+                </i></button>
+        </div>
+    </nav>
+    <!-- Nav Bar -->
+
+    <!-- Bento Box -->
+    <ul class="menu bottomRight">
+        <li class="share top">
+            <i class="ri-grid-fill ri-1x"></i>
+            <ul class="submenu">
+                <li><a href="https://www.linkedin.com/in/rajushrestha001/" target="_blank" class="linkedin"><i
+                            class="ri-linkedin-fill ri-1x"></i></a></li>
+                <li><a href="https://dribbble.com/rajushrestha001" target="_blank" class="dribbble"><i
+                            class="ri-dribbble-line ri-1x"></i></a></li>
+                <li><a href="https://www.behance.net/rajushrestha001" target="_blank" class="behance"><i
+                            class="ri-behance-fill ri-1x"></i></a></li>
+                <!-- <li><a href="#" class="instagram"><i class="ri-grid-fill ri-1x"></i></a></li> -->
+            </ul>
+        </li>
+    </ul>
+    <!--  -->
+
+    <!-- About Me Section -->
+    <div class="content">
+        <div id="bg-wrap">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                    <radialGradient id="Gradient1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5">
+                        <animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"></animate>
+                        <stop offset="0%" stop-color="rgba(255, 0, 255, 1)"></stop>
+                        <stop offset="100%" stop-color="rgba(255, 0, 255, 0)"></stop>
+                    </radialGradient>
+                    <radialGradient id="Gradient2" cx="50%" cy="50%" fx="2.68147%" fy="50%" r=".5">
+                        <animate attributeName="fx" dur="23.5s" values="0%;3%;0%" repeatCount="indefinite"></animate>
+                        <stop offset="0%" stop-color="rgba(255, 255, 0, 1)"></stop>
+                        <stop offset="100%" stop-color="rgba(255, 255, 0, 0)"></stop>
+                    </radialGradient>
+                    <radialGradient id="Gradient3" cx="50%" cy="50%" fx="0.836536%" fy="50%" r=".5">
+                        <animate attributeName="fx" dur="21.5s" values="0%;3%;0%" repeatCount="indefinite"></animate>
+                        <stop offset="0%" stop-color="rgba(0, 255, 255, 1)"></stop>
+                        <stop offset="100%" stop-color="rgba(0, 255, 255, 0)"></stop>
+                    </radialGradient>
+                    <radialGradient id="Gradient4" cx="50%" cy="50%" fx="4.56417%" fy="50%" r=".5">
+                        <animate attributeName="fx" dur="23s" values="0%;5%;0%" repeatCount="indefinite"></animate>
+                        <stop offset="0%" stop-color="rgba(0, 255, 0, 1)"></stop>
+                        <stop offset="100%" stop-color="rgba(0, 255, 0, 0)"></stop>
+                    </radialGradient>
+                    <radialGradient id="Gradient5" cx="50%" cy="50%" fx="2.65405%" fy="50%" r=".5">
+                        <animate attributeName="fx" dur="24.5s" values="0%;5%;0%" repeatCount="indefinite"></animate>
+                        <stop offset="0%" stop-color="rgba(0,0,255, 1)"></stop>
+                        <stop offset="100%" stop-color="rgba(0,0,255, 0)"></stop>
+                    </radialGradient>
+                    <radialGradient id="Gradient6" cx="50%" cy="50%" fx="0.981338%" fy="50%" r=".5">
+                        <animate attributeName="fx" dur="25.5s" values="0%;5%;0%" repeatCount="indefinite"></animate>
+                        <stop offset="0%" stop-color="rgba(255,0,0, 1)"></stop>
+                        <stop offset="100%" stop-color="rgba(255,0,0, 0)"></stop>
+                    </radialGradient>
+                </defs>
+                <rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient4)">
+                    <animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite" />
+                    <animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite" />
+                    <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="17s"
+                        repeatCount="indefinite" />
+                </rect>
+                <rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient5)">
+                    <animate attributeName="x" dur="23s" values="0%;-25%;0%" repeatCount="indefinite" />
+                    <animate attributeName="y" dur="24s" values="25%;-25%;25%" repeatCount="indefinite" />
+                    <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="18s"
+                        repeatCount="indefinite" />
+                </rect>
+                <rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient6)">
+                    <animate attributeName="x" dur="25s" values="-25%;0%;-25%" repeatCount="indefinite" />
+                    <animate attributeName="y" dur="26s" values="0%;-25%;0%" repeatCount="indefinite" />
+                    <animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="19s"
+                        repeatCount="indefinite" />
+                </rect>
+                <rect x="13.744%" y="1.18473%" width="100%" height="100%" fill="url(#Gradient1)"
+                    transform="rotate(334.41 50 50)">
+                    <animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite"></animate>
+                    <animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"></animate>
+                    <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="7s"
+                        repeatCount="indefinite"></animateTransform>
+                </rect>
+                <rect x="-2.17916%" y="35.4267%" width="100%" height="100%" fill="url(#Gradient2)"
+                    transform="rotate(255.072 50 50)">
+                    <animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite"></animate>
+                    <animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite"></animate>
+                    <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="12s"
+                        repeatCount="indefinite"></animateTransform>
+                </rect>
+                <rect x="9.00483%" y="14.5733%" width="100%" height="100%" fill="url(#Gradient3)"
+                    transform="rotate(139.903 50 50)">
+                    <animate attributeName="x" dur="25s" values="0%;25%;0%" repeatCount="indefinite"></animate>
+                    <animate attributeName="y" dur="12s" values="0%;25%;0%" repeatCount="indefinite"></animate>
+                    <animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="9s"
+                        repeatCount="indefinite"></animateTransform>
+                </rect>
+            </svg>
+        </div>
+        <div class="centered" data-aos-duration="1000">
+            <div class="PageBackToWork">
+                <h1 id="hero-rotating-text" class="PageBackToWork-heading">
+                    <span id="hero-it-text" class="PageBackToWork-heading-itText">Designing the</span>
+                    <span class="PageBackToWork-heading-rotationTextContainer">
+                        <span data-hero-rotating-text class="PageBackToWork-heading-rotationText">Dreams</span>
+                        <span data-hero-rotating-text
+                            class="PageBackToWork-heading-rotationText is-hidden is-inactive">Future</span>
+                        <span data-hero-rotating-text
+                            class="PageBackToWork-heading-rotationText is-hidden is-inactive">Vision</span>
+                        <span data-hero-rotating-text
+                            class="PageBackToWork-heading-rotationText is-hidden is-inactive">Imagination</span>
+                        <span data-hero-rotating-text
+                            class="PageBackToWork-heading-rotationText is-hidden is-inactive">Possibility</span>
+                    </span> <br><span id="hero-it-text" class="PageBackToWork-heading-itText">One Pixel at a time</span>
+            </div>
+            <div class="line">
+                <div data-aos="fade-up" data-aos-duration="3000">
+                    <p>I'm Raju Shrestha, a dedicated UX designer passionate about
+                        creating intuitive and user-centric digital experiences. With a
+                        love for design and an eye for detail, I bring innovation and
+                        creativity to every project I undertake.</p>
+                </div>
+            </div>
+            <div class="scroll">
+                <a href="#image-grid" data-aos="fade-up" data-aos-duration="3000">
+                    <p>SCROLL</p> <i class="ri-arrow-down-line"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End of Hero -->
+
+    <!-- Works  -->
+    <div class="img-grid">
+        <div class="grid-container">
+            <img src="/kullabs.png" alt="Your Image" />
+            <div class="overlay">
+                <h1>KULLABS Mobile Application</h1>
+                <h4>Subheading</h4>
+                <a href="path-to-another-page.html">View More</a>
+            </div>
+        </div>
+        <div class="grid-container">
+            <img src="/Phalano.png" alt="Your Image" />
+            <div class="overlay-1">
+                <h1>Phalano Jobs Mobile Application</h1>
+                <h4>Subheading</h4>
+                <a href="path-to-another-page.html">View More</a>
+            </div>
+        </div>
+        <div class="grid-container">
+            <img src="https://placehold.co/600x400" alt="Your Image" />
+            <div class="overlay-2">
+                <h1>Heading</h1>
+                <h2>Subheading</h2>
+                <a href="path-to-another-page.html">Click Here</a>
+            </div>
+        </div>
+        <div class="grid-container">
+            <img src="https://placehold.co/600x400" alt="Your Image" />
+            <div class="overlay-3">
+                <h1>Heading</h1>
+                <h2>Subheading</h2>
+                <a href="path-to-another-page.html">Click Here</a>
+            </div>
+        </div>
+        <div class="grid-container">
+            <img src="https://placehold.co/600x400" alt="Your Image" />
+            <div class="overlay-4">
+                <h1>Heading</h1>
+                <h2>Subheading</h2>
+                <a href="path-to-another-page.html">Click Here</a>
+            </div>
+        </div>
+        <div class="grid-container">
+            <img src="https://placehold.co/600x400" alt="Your Image" />
+            <div class="overlay-5">
+                <h1>Heading</h1>
+                <h2>Subheading</h2>
+                <a href="path-to-another-page.html">Click Here</a>
+            </div>
+        </div>
+    </div>
+<!-- End of works -->
+    <marquee behavior="" direction="">&#128526; GRAPHICS DESIGNER &#128526; UI DESIGNER &#128526; UX DESIGNER &#128526;
+    </marquee>
+    <footer>
+        <p>&copy; 2023 Your Name. All Rights Reserved.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
