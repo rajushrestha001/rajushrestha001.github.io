@@ -3,8 +3,8 @@ html {
    }
    body {
     margin: 0;
-    padding: 0;
-    padding: 147px;
+    padding: 158px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
    }
    img {
     max-width: 100%;
@@ -19,17 +19,47 @@ html {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #f1f1f1;
+    background-color: #ffffff;
+    border-radius: 100px;
     color: black;
+    border: 1px rgba(255, 0, 0, 0.074) solid;
     padding: 10px;
     font-size: 14px;
     cursor: pointer;
     display: none;
    }
+   .scroll-to-top:hover {
+    background-color: red;
+    color: #fff;
+    }
+   .scroll-dot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border: solid 1px red;
+    border-radius: 100px;
+   }
+   
+   .scroll-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #d6d6d6;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    cursor: pointer;
+   }
+   
+   .scroll-dot.active {
+    background-color: #000;
+   }
+   
    .section {
-    position: sticky;
-    top: 100px;
-    padding: 20px;
-    background-color: #f1f1f1;
-    margin-left: 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
    }

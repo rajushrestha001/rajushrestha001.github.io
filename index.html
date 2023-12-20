@@ -4,32 +4,43 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Jakarta+Sans:wght@300;400;500;700&display=swap"
-        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.css">
     <link rel="stylesheet" href="scss/style.css" />
     <title>Portfolio</title>
+
 </head>
 
 <body>
     <!-- Nav Bar -->
     <nav class="navbar">
         <div class="nav-brand">
-            <h1>designlake.</h1>
+            <h1 class="k-hover">designlake.</h1>
         </div>
-        <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-        </ul>
-        <div class="cv-cntnr">
-            <button class="btn">Download CV <i class="ri-download-line">
-                    <div class="parallelogram-1"></div>
-                    <div class="parallelogram-2"></div>
-                    <span></span>
-                </i></button>
+        <div class="nav-links">
+            <a href="#" class="k-hover">HOME</a>
+            <a href="#" class="k-hover">ABOUT</a>
+            <a href="#" class="k-hover">SERVICES</a>
+            </ul>
+            <div class="cv-cntnr">
+                <button class="btn">Download CV <i class="ri-download-line">
+                        <div class="parallelogram-1"></div>
+                        <div class="parallelogram-2"></div>
+                        <span></span>
+                    </i></button>
+            </div>
         </div>
+
+
     </nav>
     <!-- Nav Bar -->
 
@@ -131,6 +142,7 @@
             <div class="PageBackToWork">
                 <h1 id="hero-rotating-text" class="PageBackToWork-heading">
                     <span id="hero-it-text" class="PageBackToWork-heading-itText">Designing the</span>
+                    <br>
                     <span class="PageBackToWork-heading-rotationTextContainer">
                         <span data-hero-rotating-text class="PageBackToWork-heading-rotationText">Dreams</span>
                         <span data-hero-rotating-text
@@ -141,7 +153,9 @@
                             class="PageBackToWork-heading-rotationText is-hidden is-inactive">Imagination</span>
                         <span data-hero-rotating-text
                             class="PageBackToWork-heading-rotationText is-hidden is-inactive">Possibility</span>
-                    </span> <br><span id="hero-it-text" class="PageBackToWork-heading-itText">One Pixel at a time</span>
+                    </span>
+                    <br>
+                    <span id="hero-it-text" class="PageBackToWork-heading-btmText">One Pixel at a time</span>
             </div>
             <div class="line">
                 <div data-aos="fade-up" data-aos-duration="3000">
@@ -159,6 +173,51 @@
         </div>
     </div>
     <!-- End of Hero -->
+
+    <div class="network">
+        <svg viewBox="0 0 1436 216" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="scroll-line"
+                d="M1.5 71.5L286.372 178.362C430.256 232.336 590.112 224.003 727.606 155.361L918.493 60.0634C1075.42 -18.2799 1260.21 -17.534 1416.49 62.0734L1435 71.5"
+                stroke="black" stroke-width="3" />
+        </svg>
+        <div class="header">
+            <h1>The strength of our network</h1>
+            <p>Our community of collaborators includes experts and professionals who excel in every aspect of
+                communications and marketing, expanding our capacity to deliver innovative and multifaceted strategies.
+                By tapping into our network, our clients gain access to a truly comprehensive spectrum of resources –
+                and outstanding service.</p>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <i class="ri-linkedin-fill ri-1x"></i>
+                <h2>LinkedIn</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, odit?</p>
+            </div>
+            <div class="card">
+                <i class="ri-linkedin-fill ri-1x"></i>
+                <h2>LinkedIn</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, odit?</p>
+            </div>
+            <div class="card">
+                <i class="ri-linkedin-fill ri-1x"></i>
+                <h2>LinkedIn</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, odit?</p>
+            </div>
+            <div class="card">
+                <i class="ri-linkedin-fill ri-1x"></i>
+                <h2>LinkedIn</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, odit?</p>
+            </div>
+        </div>
+
+    </div>
+
+    <marquee>My Projects <i class="ri-circle-fill ri-xxs"></i> My Projects <i class="ri-circle-fill ri-xxs"></i> My
+        Projects <i class="ri-circle-fill ri-xxs"></i> My Projects <i class="ri-circle-fill ri-xxs"></i> My Projects <i
+            class="ri-circle-fill ri-xxs"></i> My Projects <i class="ri-circle-fill ri-xxs"></i> My Projects </marquee>
+
+
+
 
     <!-- Works  -->
     <div class="img-grid">
@@ -211,10 +270,23 @@
             </div>
         </div>
     </div>
-<!-- End of works -->
+    <!-- End of works -->
     <marquee behavior="" direction="">&#128526; GRAPHICS DESIGNER &#128526; UI DESIGNER &#128526; UX DESIGNER &#128526;
     </marquee>
     <footer>
+        <h1>GET IN TOUCH</h1>
+        <ul>
+            <li><a href="#" target="_blank">
+                    <i class="ri-mail-line ri-xl"></i></a></li>
+            <li><a href="#" target="_blank"> <i class="ri-phone-line ri-xl"></i></a></li>
+            <li><a href="#" target="_blank">
+                    <i class="ri-messenger-line ri-xl"></i></a></li>
+            <li><a href="#" target="_blank">
+                    <i class="ri-whatsapp-line ri-xl"></i></a></li>
+        </ul>
+
+
+
         <p>&copy; 2023 Your Name. All Rights Reserved.</p>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
@@ -224,6 +296,19 @@
     <script>
         AOS.init();
     </script>
+    <script>
+        const line = document.getElementById('scroll-line');
+
+        window.addEventListener('scroll', () => {
+            const scrollHeight = window.innerHeight;
+            const scrollY = window.scrollY;
+
+            line.setAttribute('stroke-dashoffset', scrollY * -2);
+            line.setAttribute('stroke-dasharray', `${scrollHeight * 2} ${scrollHeight * 2}`);
+        });
+    </script>
+
+    <script src="kursor.js"></script>
     <script src="script.js"></script>
 </body>
 
