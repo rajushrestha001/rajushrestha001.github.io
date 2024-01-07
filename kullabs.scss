@@ -331,3 +331,64 @@ footer {
     }
     
       }
+/* Existing CSS */
+/* ... */
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+    /* Adjustments for smaller screens */
+    .navbar {
+      padding: 16px 48px;
+    }
+    
+    .hero-text {
+      padding: 48px;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  
+    .section-3,
+    .wireframe,
+    .prototype,
+    .final,
+    .takeaways {
+      padding: 48px;
+    }
+    
+    footer {
+      padding: 32px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Further adjustments for mobile screens */
+    .nav-brand{
+        font-family: syne;
+        text-align: center;
+    }
+    .navbar {
+      padding: 16px;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+    }
+    
+    .nav-links {
+      display: none; /* Hide the links by default */
+      flex-direction: column;
+      width: 100%;
+      margin-top: 16px;
+      text-align: center;
+    }
+    
+    .nav-links.active {
+      display: flex; /* Show the links when active */
+    }
+    
+    .nav-links a {
+      padding: 8px;
+    }
+    
+    /* Adjust other elements as needed for mobile */
+  }
+  
