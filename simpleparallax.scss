@@ -1,0 +1,23 @@
+body {
+    height: 3000px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.grid {
+    position: absolute;
+    width: 33.33%;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.grid:nth-child(2) {
+    z-index: 2;
+}
