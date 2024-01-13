@@ -17,9 +17,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="kullabs.css" />
+  <link rel="stylesheet" href="./scss/kullabs.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 </head>
 
 <body>
@@ -45,10 +47,10 @@
 
 </nav>
   <div class="hero-section">
-    <img src="kullabs_head_image.png" alt="Placeholder Image">
+    <img src="./img/kullabs/kullabs_head_image.png" alt="Placeholder Image">
   </div>
-  <div class="hero-text">
-    <div class="overview">
+  <div  class="hero-text">
+    <div class="overview" data-aos="fade-up" data-aos-duration="3000">
       <h5>Overview</h5>
       <h2>
         Simplify Learning with Kullabs
@@ -58,7 +60,7 @@
         high school, college students, and young learners, aiming to simplify education.
       </p>
     </div>
-    <div class="chlng">
+    <div class="chlng" data-aos="fade-up" data-aos-duration="3000">
       <h5>The challenge</h5>
       <h2>
         Designing Engagement: Kullabs UX Hurdles
@@ -69,7 +71,7 @@
 
       </p>
     </div>
-    <div class="gl">
+    <div class="gl" data-aos="fade-up" data-aos-duration="3000">
       <h5>The goal</h5>
       <h2>
         Creating Intuitive Education Access
@@ -81,7 +83,7 @@
       </p>
     </div>
 
-    <div class="soln">
+    <div class="soln" data-aos="fade-up" data-aos-duration="3000">
       <h5>The solution</h5>
       <h2>
         User-Centric UX: Kullabs' Design Answers
@@ -92,13 +94,20 @@
       </p>
     </div>
   </div>
-  <div class="section-3">
-    <small>Competitive Analysis</small>
-    <img src="comp.png" alt="">
-    <small>Flow Chart</small>
-    <img src="Flow Chart.png" alt="">
-  </div>
-  <div class="wireframe">
+  <div class="splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide"><img src="./img/kullabs/Comp.png" alt=""><small>Competitive Analysis</small></li>
+        <li class="splide__slide" ><img src="./img/kullabs/Flow Chart.png" alt=""><small>Flow Chart</small></li>
+      </ul>
+    </div>
+  
+    <!-- Add the progress bar element -->
+    <div class="my-slider-progress">
+      <div class="my-slider-progress-bar"></div>
+    </div>
+ </div>
+  <div class="wireframe" data-aos="fade-up" data-aos-duration="3000">
     <h2>Wireframing the solution</h2>
     <h5>Addressing the pains</h5>
     <ul>
@@ -111,9 +120,9 @@
     <p>I quickly mocked up some basic wireframes to gather feedback from Product, Engineering and the users on the
       overall layout and structure of the wizard form. This involved establishing a standardised visual hierarchy and
       layout for the future wizard component.</p>
-    <img src="Wireframe.png" alt="">
+    <img src="./img/kullabs/Wireframe.png" alt="">
   </div>
-  <div class="prototype">
+  <div class="prototype" data-aos="fade-up" data-aos-duration="3000">
     <h2>Prototyping the Solution</h2>
     <h5>Addressing the Needs</h5>
     <ul>
@@ -123,9 +132,9 @@
       <li>Establishing consistent design patterns and styles for future prototypes and iterations</li>
     </ul>
     <p>To address these needs, I initiated the prototyping phase by translating wireframes into interactive prototypes. These prototypes allowed for real-time user testing and feedback collection, enabling Product and Engineering teams to visualize the user flow and functionality. By creating a consistent design language and interactive experience, these prototypes served as a blueprint for future iterations and design enhancements.</p>
-    <img src="prototype.png" alt="">
+    <img src="./img/kullabs/prototype.png" alt="">
   </div>
-  <div class="final">
+  <div class="final" data-aos="fade-up" data-aos-duration="3000">
     <h2>Finalizing the Design Before Launch</h2>
 <h5>Addressing the Requirements</h5>
 <ul>
@@ -135,19 +144,36 @@
   <li>Documenting design guidelines and specifications for consistency post-launch</li>
 </ul>
 <p>Prior to launch, I focused on refining the design elements based on user feedback and usability testing results. This involved fine-tuning visual aesthetics, typography, and color palettes to create a polished user interface. Ensuring responsiveness across various devices was a priority, allowing for a consistent and seamless user experience. Additionally, I documented comprehensive design guidelines and specifications to maintain consistency in design elements and interactions post-launch.</p>
-    <img src="final.png" alt="">
+      <img src="Onboarding.png" alt="" data-aos="fade-up" data-aos-duration="3000">
+    <img src="./img/kullabs/mainpgs.png" alt="" data-aos="fade-up" data-aos-duration="3000">
+    <img src="./img/kullabs/Frames.png" alt="" data-aos="fade-up" data-aos-duration="3000">
+    <img src="./img/kullabs/comps.png" alt="" data-aos="fade-up" data-aos-duration="3000">
   </div>
   <div class="takeaways">
-    <div class="text-container"><h5>Iterative Design Process:</h5> <p>The approach involved iterative steps, starting from wireframing, moving to prototyping, and culminating in the final design before launch. This iterative method allowed for continuous refinement based on feedback.</p></div>
-    <div class="text-container"><h5>User-Centric Focus:</h5> <p>Throughout the wireframing, prototyping, and final design stages, the focus remained on addressing user needs and pain points. User feedback and testing were integral to each phase, ensuring the end product catered effectively to user requirements.</p></div>
-    <div class="text-container"><h5>Collaboration and Feedback:</h5> <p>Collaboration with cross-functional teams such as Product and Engineering facilitated the gathering of diverse perspectives. It allowed for the incorporation of valuable feedback into each design iteration.</p></div>
-    <div class="text-container"><h5>Consistency and Standardization:</h5> <p>Establishing standardized design patterns and components was crucial for scalability. This ensured consistency in the user experience and provided a clear design framework for future iterations or components.</p></div>
-    <div class="text-container"><h5>Usability and Responsiveness:</h5> <p>Usability testing and responsive design principles were prioritized to create an intuitive and seamless experience across different devices. Adapting the design to varying screen sizes and functionalities was key to ensuring broad accessibility.</p></div>
-    <div class="text-container"><h5>Documentation for Future Reference:</h5> <p>Creating comprehensive design guidelines and specifications provided a reference for consistency post-launch. This documentation served as a guide for maintaining design coherence in future updates or expansions.</p></div>
+    <h2>Takeaways</h2>
+    <div class="text">
+      <div class="text-container" data-aos="fade-up" data-aos-duration="2000"><h5>Iterative Design Process:</h5> <p>The approach involved iterative steps, starting from wireframing, moving to prototyping, and culminating in the final design before launch. This iterative method allowed for continuous refinement based on feedback.</p></div>
+      <div class="text-container" data-aos="fade-up" data-aos-duration="3000"><h5>User-Centric Focus:</h5> <p>Throughout the wireframing, prototyping, and final design stages, the focus remained on addressing user needs and pain points. User feedback and testing were integral to each phase, ensuring the end product catered effectively to user requirements.</p></div>
+      <div class="text-container" data-aos="fade-up" data-aos-duration="2000"><h5>Collaboration and Feedback:</h5> <p>Collaboration with cross-functional teams such as Product and Engineering facilitated the gathering of diverse perspectives. It allowed for the incorporation of valuable feedback into each design iteration.</p></div>
+      <div class="text-container" data-aos="fade-up" data-aos-duration="3000"><h5>Consistency and Standardization:</h5> <p>Establishing standardized design patterns and components was crucial for scalability. This ensured consistency in the user experience and provided a clear design framework for future iterations or components.</p></div>
+      <div class="text-container" data-aos="fade-up" data-aos-duration="2000"><h5>Usability and Responsiveness:</h5> <p>Usability testing and responsive design principles were prioritized to create an intuitive and seamless experience across different devices. Adapting the design to varying screen sizes and functionalities was key to ensuring broad accessibility.</p></div>
+      <div class="text-container" data-aos="fade-up" data-aos-duration="3000"><h5>Documentation for Future Reference:</h5> <p>Creating comprehensive design guidelines and specifications provided a reference for consistency post-launch. This documentation served as a guide for maintaining design coherence in future updates or expansions.</p></div>
     </div>
-
+  </div>
+  <div class="more-projects">
+    <div class="prev">
+     <i class="ri-arrow-left-line"></i>
+     <h3>Project Name</h3>
+      
+    </div>
+    <div class="next">
+      <h3>Project Name</h3>
+      <i class="ri-arrow-right-line"></i>
+    </div>
   </div>
   <footer>
+    <small>Got An Idea?</small>
+    <h3>Let's craft brilliance together!</h3>
     <h1>GET IN TOUCH</h1>
     <ul class="wrapper">
         <li class="icon facebook">
@@ -169,6 +195,11 @@
       </ul>
     <p>&copy; 2023 designlake. All Rights Reserved.</p>
 </footer>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 <script>// Get the button
   var backToTopBtn = document.getElementById("backToTopBtn");
   
@@ -189,14 +220,27 @@
   function scrollToTop() {
    document.body.scrollTop = 0; // For Safari
    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-  }</script>
-  <script src="https://unpkg.com/kursor"></script>
-<script src="kursor.js">
-      new Kursor({
-  color: '#ff6600'
-})
+  }
 </script>
-
+<script src="https://unpkg.com/kursor"></script>
+<script src="kursor.js">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script>
+   document.addEventListener( 'DOMContentLoaded', function () {
+     var splide = new Splide( '.splide' );
+     var bar    = splide.root.querySelector( '.my-slider-progress-bar' );
+     
+     // Updates the bar width whenever the carousel moves:
+     splide.on( 'mounted move', function () {
+       var end = splide.Components.Controller.getEnd() + 1;
+       var rate = Math.min( ( splide.index + 1 ) / end, 1 );
+       bar.style.width = String( 100 * rate ) + '%';
+     } );
+     
+     splide.mount();
+   } );
+</script>
 </body>
 
 </html>

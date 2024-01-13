@@ -11,9 +11,10 @@ h1 {
 }
 
 p {
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 15px;
+  line-height: 1.5;
   font-family: "Plus Jakarta Sans", sans-serif;
+  color: #000b1c99;
 }
 
 /* Style for the fixed navigation bar */
@@ -89,7 +90,7 @@ p {
     .parallelogram-1 {
       position: absolute;
       top: 0px;
-      right: 320px;
+      right: 230px;
       width: 10px;
       height: 50px;
       transform: skew(20deg);
@@ -100,7 +101,7 @@ p {
     .parallelogram-2 {
       position: absolute;
       top: 0px;
-      right: 340px;
+      right: 210px;
       width: 5px;
       height: 50px;
       transform: skew(20deg);
@@ -329,7 +330,6 @@ p {
     }
 
     .scroll {
-      scroll-behavior: smooth;
       display: flex;
       justify-content: center;
       transition: transform 0.3s ease-in-out;
@@ -345,6 +345,9 @@ p {
         margin-left: 5px;
         animation: arrowBounce 1s infinite;
       }
+    }
+    .scroll:hover{
+      background-color: #000;
     }
 
     @keyframes arrowBounce {
@@ -599,6 +602,8 @@ p {
 .network {
   background-color: #f8f6ef;
   padding: 48px;
+  margin: 0px 0px 80px 0px;
+  border-radius: 32px;
 
   svg {
     position: absolute;
@@ -613,6 +618,7 @@ p {
     grid-template-columns: 1fr 1fr;
     gap: 64px;
     align-items: center;
+    padding-bottom: 48px;
 
     h1 {
       font-size: 56px;
@@ -628,10 +634,30 @@ p {
     .card {
       padding: 20px;
       background-color: #fff;
-      border-radius: 2px;
+      border-radius: 8px;
+      .circle-1{
+        width: 20px;
+        height: 20px;
+        background: #abffb799;
+        border-radius: 50%;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        opacity: 0;
+        animation-duration: 3s;
+      }
+      .circle-2{
+        width: 12px; height: 12px; background: #ff660099; border-radius: 50%; position: relative; top: -60px; left: 20px;
+      }
 
       &:hover {
         border: 1px solid #1863dc;
+      }
+      &:hover .circle-1{
+        top: -20px;
+        left: -15px;
+  opacity: 1;
+  animation-duration: 3s;
       }
     }
   }
