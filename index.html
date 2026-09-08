@@ -6,242 +6,27 @@
 <title>designlake — Product Designer</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
-
-:root{
-  --bg:#f4f3ef; --ink:#111; --muted:#77736d; --line:#d7d4cd;
-  --card:#e9e7e1; --accent:#dfff4f; --white:#fbfaf7;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",sans-serif}
-a{text-decoration:none;color:inherit}
-button{font:inherit}
-.wrap{width:min(1240px,calc(100% - 48px));margin:auto}
-
-nav{height:84px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
-.logo{font:700 23px "Space Grotesk";letter-spacing:-.07em}
-.navlinks{display:flex;gap:30px;font-size:14px}
-.navlinks a{opacity:.55}.navlinks a:hover{opacity:1}
-.contact{border:1px solid var(--ink);padding:10px 17px;border-radius:100px;font-size:14px}
-
-.hero{min-height:680px;padding:100px 0 115px;display:flex;flex-direction:column;justify-content:center}
-.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin-bottom:25px}
-h1{font:600 clamp(62px,9.4vw,138px)/.84 "Space Grotesk";letter-spacing:-.08em;margin:0;max-width:1150px}
-h1 span{border-bottom:5px solid var(--ink)}
-.hero-bottom{display:flex;justify-content:space-between;align-items:end;gap:50px;margin-top:65px}
-.intro{max-width:520px;font-size:18px;color:#3f3c38;margin:0}
-.scroll{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:var(--muted)}
-
-.section-head{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:25px 0}
-.section-head h2{font:600 35px "Space Grotesk";letter-spacing:-.06em;margin:0}
-.section-head p{font-size:12px;color:var(--muted);margin:0}
-
-.filters{display:flex;gap:8px;padding:22px 0;flex-wrap:wrap}
-.filter{background:transparent;border:1px solid var(--line);border-radius:100px;padding:9px 15px;font-size:13px;cursor:pointer}
-.filter.active,.filter:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-
-.work-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;padding-bottom:120px}
-.project{grid-column:span 6;background:var(--white);border:1px solid var(--line);overflow:hidden;cursor:pointer;transition:.3s}
-.project:nth-child(1),.project:nth-child(4),.project:nth-child(7),.project:nth-child(10){grid-column:span 7}
-.project:nth-child(2),.project:nth-child(3),.project:nth-child(5),.project:nth-child(6),.project:nth-child(8),.project:nth-child(9){grid-column:span 5}
-.project:hover{transform:translateY(-5px)}
-
-.project-preview{height:610px;background:#dedbd4;display:flex;align-items:flex-start;justify-content:center;overflow:hidden;position:relative;padding:35px}
-.project-preview img{width:76%;box-shadow:0 22px 55px rgba(0,0,0,.14);transform-origin:top center}
-.project:nth-child(even) .project-preview{background:#e5e2dc}
-.project:nth-child(3n) .project-preview{background:#e1e3e1}
-.project:nth-child(4n) .project-preview{background:#dedfe3}
-.badge{position:absolute;top:18px;left:18px;background:var(--accent);padding:7px 10px;border-radius:100px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;z-index:2}
-.project-arrow{position:absolute;right:18px;bottom:18px;width:44px;height:44px;border:1px solid #222;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.65);font-size:19px;z-index:2}
-.meta{padding:19px 20px 21px;display:flex;justify-content:space-between;gap:20px}
-.meta h3{font:600 23px "Space Grotesk";letter-spacing:-.045em;margin:0 0 3px}
-.meta p{font-size:13px;color:var(--muted);margin:0}
-.meta .year{font-size:11px;color:var(--muted);white-space:nowrap}
-
-.statement{border-top:1px solid var(--line);padding:100px 0 120px;display:grid;grid-template-columns:1fr 2fr;gap:40px}
-.statement small{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:var(--muted)}
-.statement h2{font:600 clamp(45px,5.5vw,78px)/.9 "Space Grotesk";letter-spacing:-.07em;margin:0}
-.statement em{font-style:normal;color:var(--muted)}
-
-.services{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:120px}
-.service{display:grid;grid-template-columns:80px 1fr 1fr;gap:25px;padding:29px 0;border-bottom:1px solid var(--line)}
-.service:last-child{border:0}
-.num{font-size:12px;color:var(--muted)}
-.service h3{font:600 28px "Space Grotesk";letter-spacing:-.05em;margin:0}
-.service p{font-size:14px;color:var(--muted);max-width:450px;margin:0}
-
-footer{background:var(--ink);color:var(--bg);padding:90px 0 35px}
-.footer-big{font:600 clamp(62px,10vw,150px)/.82 "Space Grotesk";letter-spacing:-.085em;margin-bottom:100px}
-.footer-row{border-top:1px solid #444;padding-top:20px;display:flex;justify-content:space-between;font-size:12px}
-.footer-links{display:flex;gap:25px}
-
-.modal{position:fixed;inset:0;background:rgba(10,10,10,.72);display:none;z-index:20;padding:28px;overflow:auto}
-.modal.open{display:block}
-.modal-inner{max-width:1100px;margin:0 auto;background:var(--bg);min-height:100%;position:relative}
-.close{position:sticky;top:18px;float:right;margin:18px;width:44px;height:44px;border:1px solid var(--ink);border-radius:50%;background:var(--bg);font-size:20px;cursor:pointer;z-index:3}
-.case-head{padding:70px 60px 45px;border-bottom:1px solid var(--line)}
-.case-kicker{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
-.case-head h2{font:600 clamp(48px,6vw,80px)/.88 "Space Grotesk";letter-spacing:-.07em;margin:18px 0}
-.case-head p{max-width:650px;color:#55514c;font-size:17px}
-.case-content{padding:50px 60px}
-.case-image{background:#e3e0da;text-align:center;padding:50px;margin-bottom:40px}
-.case-image img{max-width:430px;width:100%;box-shadow:0 20px 50px rgba(0,0,0,.16)}
-.case-notes{display:grid;grid-template-columns:1fr 2fr;gap:40px;border-top:1px solid var(--line);padding-top:30px}
-.case-notes h3{font:600 28px "Space Grotesk";letter-spacing:-.05em;margin:0}
-.case-notes p{margin:0;color:#5e5a54;max-width:600px}
-
-@media(max-width:800px){
- .wrap{width:calc(100% - 28px)}
- nav{height:70px}.navlinks{display:none}
- .hero{min-height:600px;padding:70px 0 85px}
- h1{font-size:clamp(57px,16vw,100px)}
- .hero-bottom{display:block;margin-top:45px}.scroll{margin-top:30px}
- .project,.project:nth-child(n){grid-column:span 12}
- .project-preview{height:470px}.project-preview img{width:72%}
- .statement{grid-template-columns:1fr;padding:75px 0}
- .service{grid-template-columns:45px 1fr;padding:24px 0}.service p{grid-column:2}
- .footer-big{margin-bottom:70px}.footer-row{display:block}.footer-links{margin-top:20px}
- .modal{padding:0}.case-head,.case-content{padding-left:22px;padding-right:22px}
- .case-notes{grid-template-columns:1fr}
-}
+:root{--bg:#f4f3ef;--ink:#111;--muted:#77736d;--line:#d7d4cd;--card:#e9e7e1;--accent:#dfff4f;--white:#fbfaf7}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",sans-serif}a{text-decoration:none;color:inherit}button{font:inherit}.wrap{width:min(1240px,calc(100% - 48px));margin:auto}nav{height:84px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.logo{font:700 23px "Space Grotesk";letter-spacing:-.07em}.navlinks{display:flex;gap:30px;font-size:14px}.navlinks a{opacity:.55}.navlinks a:hover{opacity:1}.contact{border:1px solid var(--ink);padding:10px 17px;border-radius:100px;font-size:14px}.hero{min-height:680px;padding:100px 0 115px;display:flex;flex-direction:column;justify-content:center}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin-bottom:25px}h1{font:600 clamp(62px,9.4vw,138px)/.84 "Space Grotesk";letter-spacing:-.08em;margin:0;max-width:1150px}h1 span{border-bottom:5px solid var(--ink)}.hero-bottom{display:flex;justify-content:space-between;align-items:end;gap:50px;margin-top:65px}.intro{max-width:520px;font-size:18px;color:#3f3c38;margin:0}.scroll{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:var(--muted)}.section-head{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:25px 0}.section-head h2{font:600 35px "Space Grotesk";letter-spacing:-.06em;margin:0}.section-head p{font-size:12px;color:var(--muted);margin:0}.filters{display:flex;gap:8px;padding:22px 0;flex-wrap:wrap}.filter{background:transparent;border:1px solid var(--line);border-radius:100px;padding:9px 15px;font-size:13px;cursor:pointer}.filter.active,.filter:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}.work-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;padding-bottom:120px}.project{grid-column:span 6;background:var(--white);border:1px solid var(--line);overflow:hidden;cursor:pointer;transition:.3s}.project:nth-child(1),.project:nth-child(4),.project:nth-child(7),.project:nth-child(10){grid-column:span 7}.project:nth-child(2),.project:nth-child(3),.project:nth-child(5),.project:nth-child(6),.project:nth-child(8),.project:nth-child(9){grid-column:span 5}.project:hover{transform:translateY(-5px)}.project-preview{height:610px;background:#dedbd4;display:flex;align-items:flex-start;justify-content:center;overflow:hidden;position:relative;padding:35px}.project-preview img{width:76%;box-shadow:0 22px 55px rgba(0,0,0,.14);transform-origin:top center}.project:nth-child(even) .project-preview{background:#e5e2dc}.project:nth-child(3n) .project-preview{background:#e1e3e1}.project:nth-child(4n) .project-preview{background:#dedfe3}.badge{position:absolute;top:18px;left:18px;background:var(--accent);padding:7px 10px;border-radius:100px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;z-index:2}.project-arrow{position:absolute;right:18px;bottom:18px;width:44px;height:44px;border:1px solid #222;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.65);font-size:19px;z-index:2}.meta{padding:19px 20px 21px;display:flex;justify-content:space-between;gap:20px}.meta h3{font:600 23px "Space Grotesk";letter-spacing:-.045em;margin:0 0 3px}.meta p{font-size:13px;color:var(--muted);margin:0}.meta .year{font-size:11px;color:var(--muted);white-space:nowrap}.statement{border-top:1px solid var(--line);padding:100px 0 120px;display:grid;grid-template-columns:1fr 2fr;gap:40px}.statement small{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:var(--muted)}.statement h2{font:600 clamp(45px,5.5vw,78px)/.9 "Space Grotesk";letter-spacing:-.07em;margin:0}.statement em{font-style:normal;color:var(--muted)}.services{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:120px}.service{display:grid;grid-template-columns:80px 1fr 1fr;gap:25px;padding:29px 0;border-bottom:1px solid var(--line)}.service:last-child{border:0}.num{font-size:12px;color:var(--muted)}.service h3{font:600 28px "Space Grotesk";letter-spacing:-.05em;margin:0}.service p{font-size:14px;color:var(--muted);max-width:450px;margin:0}footer{background:var(--ink);color:var(--bg);padding:90px 0 35px}.footer-big{font:600 clamp(62px,10vw,150px)/.82 "Space Grotesk";letter-spacing:-.085em;margin-bottom:100px}.footer-row{border-top:1px solid #444;padding-top:20px;display:flex;justify-content:space-between;font-size:12px}.footer-links{display:flex;gap:25px}.modal{position:fixed;inset:0;background:rgba(10,10,10,.72);display:none;z-index:20;padding:28px;overflow:auto}.modal.open{display:block}.modal-inner{max-width:1100px;margin:0 auto;background:var(--bg);min-height:100%;position:relative}.close{position:sticky;top:18px;float:right;margin:18px;width:44px;height:44px;border:1px solid var(--ink);border-radius:50%;background:var(--bg);font-size:20px;cursor:pointer;z-index:3}.case-head{padding:70px 60px 45px;border-bottom:1px solid var(--line)}.case-kicker{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}.case-head h2{font:600 clamp(48px,6vw,80px)/.88 "Space Grotesk";letter-spacing:-.07em;margin:18px 0}.case-head p{max-width:650px;color:#55514c;font-size:17px}.case-content{padding:50px 60px}.case-image{background:#e3e0da;text-align:center;padding:50px;margin-bottom:40px}.case-image img{max-width:430px;width:100%;box-shadow:0 20px 50px rgba(0,0,0,.16)}.case-notes{display:grid;grid-template-columns:1fr 2fr;gap:40px;border-top:1px solid var(--line);padding-top:30px}.case-notes h3{font:600 28px "Space Grotesk";letter-spacing:-.05em;margin:0}.case-notes p{margin:0;color:#5e5a54;max-width:600px}.parth-preview{background:#0C2639!important;position:relative;align-items:center!important;padding:0!important;color:#3DDB84}.parth-logo{font:700 clamp(38px,5vw,68px)/1 "Space Grotesk";letter-spacing:-.07em;display:flex;align-items:center;gap:12px;position:relative;z-index:2}.parth-logo>span:last-child span{font-weight:500}.markx{width:42px;height:42px;display:inline-block;position:relative}.markx i{position:absolute;background:#3DDB84;border-radius:7px}.markx i:nth-child(1){width:21px;height:21px;left:0;top:11px}.markx i:nth-child(2){width:30px;height:21px;left:15px;top:0;border-radius:7px 18px 7px 7px}.markx i:nth-child(3){width:21px;height:21px;left:15px;top:21px}.markx b{position:absolute;width:15px;height:15px;left:15px;top:11px;background:#0C2639;border-radius:4px}.parth-grid{position:absolute;width:70%;height:70%;opacity:.14;background:repeating-linear-gradient(90deg,transparent 0 80px,#3DDB84 81px 82px),repeating-linear-gradient(0deg,transparent 0 80px,#3DDB84 81px 82px);transform:rotate(-8deg)}@media(max-width:800px){.wrap{width:calc(100% - 28px)}nav{height:70px}.navlinks{display:none}.hero{min-height:600px;padding:70px 0 85px}h1{font-size:clamp(57px,16vw,100px)}.hero-bottom{display:block;margin-top:45px}.scroll{margin-top:30px}.project,.project:nth-child(n){grid-column:span 12}.project-preview{height:470px}.project-preview img{width:72%}.statement{grid-template-columns:1fr;padding:75px 0}.service{grid-template-columns:45px 1fr;padding:24px 0}.service p{grid-column:2}.footer-big{margin-bottom:70px}.footer-row{display:block}.footer-links{margin-top:20px}.modal{padding:0}.case-head,.case-content{padding-left:22px;padding-right:22px}.case-notes{grid-template-columns:1fr}}
 </style>
-</head>
-<body>
-
-<header class="wrap">
-<nav>
-<a class="logo" href="#">designlake.</a>
-<div class="navlinks"><a href="#work">Work</a><a href="#about">About</a><a href="#services">Services</a></div>
-<a class="contact" href="mailto:hello@designlake.design">Let's talk ↗</a>
-</nav>
-</header>
-
-<main>
-<section class="wrap hero">
-<div class="eyebrow">Product Designer · UI / UX · Digital Experiences</div>
-<h1>I design products<br>people <span>remember.</span></h1>
-<div class="hero-bottom">
-<p class="intro">I turn complex ideas into simple, useful and expressive digital experiences — from SaaS platforms and mobile apps to emails that make people stop scrolling.</p>
-<div class="scroll">↓ Scroll to explore</div>
-</div>
-</section>
-
-<section id="work" class="wrap">
-<div class="section-head"><h2>Selected work</h2><p>Apps · SaaS · Email · Web</p></div>
-<div class="filters">
-<button class="filter active" data-filter="all">All</button>
-<button class="filter" data-filter="email">Email</button>
-<button class="filter" data-filter="app">Apps</button>
-<button class="filter" data-filter="saas">SaaS</button>
-</div>
-
-<div class="work-grid">
-
-<article class="project" data-type="email" data-title="CloudSense — Smooth Skin" data-kicker="Email · Direct Response" data-desc="A bold beauty-product email built around a clear problem → proof → process → product narrative. The purple visual system creates instant category recognition while the large product hero gives the campaign a strong stopping point." data-img="tanyera-cloudsense.png">
-<div class="project-preview"><span class="badge">Email</span><img src="tanyera-cloudsense.png"><span class="project-arrow">↗</span></div>
-<div class="meta"><div><h3>CloudSense — Smooth Skin</h3><p>Direct response · Product storytelling</p></div><span class="year">2026</span></div>
-</article>
-
-<article class="project" data-type="email" data-title="Bare Essence — September Offer" data-kicker="Email · Promotional" data-desc="An offer-led subscription campaign that uses a seasonal hook, repeated promo code and product-led imagery to keep the reader oriented toward one action. The curved sections create rhythm without adding visual clutter." data-img="bareessence-september.png">
-<div class="project-preview"><span class="badge">Email</span><img src="bareessence-september.png"><span class="project-arrow">↗</span></div>
-<div class="meta"><div><h3>Bare Essence — September</h3><p>Promotion · Subscription · Conversion</p></div><span class="year">2026</span></div>
-</article>
-
-<article class="project" data-type="email" data-title="Bare Essence — Honest Timeline" data-kicker="Email · Education" data-desc="A trust-building product education email. Instead of overpromising immediate results, the design turns the expected timeline into a simple visual story, then closes with product benefits and a single CTA." data-img="bareessence-timeline.png">
-<div class="project-preview"><span class="badge">Email</span><img src="bareessence-timeline.png"><span class="project-arrow">↗</span></div>
-<div class="meta"><div><h3>Bare Essence — Timeline</h3><p>Education · Trust · Product benefits</p></div><span class="year">2026</span></div>
-</article>
-
-<article class="project" data-type="email" data-title="Bulk Buy USA — Seller Outreach" data-kicker="Email · B2B" data-desc="A B2B outreach email designed for fast scanning. Strong navy typography, orange action points and a structured inventory checklist make a dense operational message feel easy to navigate." data-img="bulkbuy-outreach.png">
-<div class="project-preview"><span class="badge">Email</span><img src="bulkbuy-outreach.png"><span class="project-arrow">↗</span></div>
-<div class="meta"><div><h3>Bulk Buy USA — Outreach</h3><p>B2B · Information hierarchy · Lead generation</p></div><span class="year">2026</span></div>
-</article>
-
-<article class="project" data-type="email" data-title="Bulk Buy USA — Trust Builder" data-kicker="Email · B2B Brand" data-desc="A credibility-focused email that translates operational strengths into three memorable proof points: discretion, speed and network. The visual hierarchy supports a professional B2B audience without feeling corporate-heavy." data-img="bulkbuy-trust.png">
-<div class="project-preview"><span class="badge">Email</span><img src="bulkbuy-trust.png"><span class="project-arrow">↗</span></div>
-<div class="meta"><div><h3>Bulk Buy USA — Trust</h3><p>B2B · Brand credibility · Conversion</p></div><span class="year">2026</span></div>
-</article>
-
-<article class="project" data-type="email" data-title="Yellow Lotus — Flash Sale" data-kicker="Email · Ecommerce" data-desc="A retail promotional email where urgency does the heavy lifting. The large sale headline, compact product cards and repeated CTA create a straightforward path from offer discovery to shopping." data-img="yellowlotus-flash-sale.png">
-<div class="project-preview"><span class="badge">Email</span><img src="yellowlotus-flash-sale.png"><span class="project-arrow">↗</span></div>
-<div class="meta"><div><h3>Yellow Lotus — Flash Sale</h3><p>Ecommerce · Promotion · Urgency</p></div><span class="year">2026</span></div>
-</article>
-
-<article class="project" data-type="email" data-title="Yellow Lotus — Curated Comfort" data-kicker="Email · Editorial Ecommerce" data-desc="A lifestyle-led ecommerce email designed more like a magazine spread than a catalogue. Editorial imagery introduces the collection, while curated categories and one featured product keep the experience aspirational and easy to browse." data-img="yellowlotus-editorial.png">
-<div class="project-preview"><span class="badge">Email</span><img src="yellowlotus-editorial.png"><span class="project-arrow">↗</span></div>
-<div class="meta"><div><h3>Yellow Lotus — Curation</h3><p>Editorial · Ecommerce · Art direction</p></div><span class="year">2026</span></div>
-</article>
-
-<article class="project" data-type="email" data-title="GlowTrim — Social Proof" data-kicker="Email · Testimonial" data-desc="A testimonial-driven campaign built around a simple conversion idea: one customer story becomes a larger pattern of social proof. The review grid, rating score and final CTA reinforce confidence before the click." data-img="glowtrim-testimonials.png">
-<div class="project-preview"><span class="badge">Email</span><img src="glowtrim-testimonials.png"><span class="project-arrow">↗</span></div>
-<div class="meta"><div><h3>GlowTrim — Social Proof</h3><p>Testimonials · Conversion · Storytelling</p></div><span class="year">2026</span></div>
-</article>
-
-<article class="project" data-type="app" data-title="Event — Event Details" data-kicker="Product UI · Mobile App" data-desc="A mobile event-details experience focused on glanceable information: date, place, invitees, notes and sharing. The interface uses familiar iOS patterns and a calm hierarchy so the event remains the hero." data-img="event-detail.png">
-<div class="project-preview"><span class="badge">App</span><img src="event-detail.png"><span class="project-arrow">↗</span></div>
-<div class="meta"><div><h3>Event — Details</h3><p>Mobile UX · Information hierarchy · iOS UI</p></div><span class="year">2026</span></div>
-</article>
-
-<article class="project" data-type="app" data-title="Event — Create New" data-kicker="Product UI · Mobile App" data-desc="A creation flow that brings event, reminder and occasion inputs into one flexible form. The design prioritizes progressive disclosure and familiar iOS controls while keeping the Save action persistent and obvious." data-img="event-create.png">
-<div class="project-preview"><span class="badge">App</span><img src="event-create.png"><span class="project-arrow">↗</span></div>
-<div class="meta"><div><h3>Event — Create</h3><p>UX flow · Form design · Mobile UI</p></div><span class="year">2026</span></div>
-</article>
-
-</div>
-</section>
-
-<section id="about" class="wrap statement">
-<small>01 / Approach</small>
-<h2>Less noise.<br><em>More signal.</em><br>Better products.</h2>
-</section>
-
-<section id="services" class="wrap services">
-<div class="section-head"><h2>What I do</h2><p>End-to-end product design</p></div>
-<div class="service"><span class="num">01</span><h3>Product Design</h3><p>From rough product ideas to polished interfaces, I shape flows, systems and experiences around real user needs.</p></div>
-<div class="service"><span class="num">02</span><h3>UI / UX</h3><p>Clear information architecture, interaction design and visual systems that make complex products feel obvious.</p></div>
-<div class="service"><span class="num">03</span><h3>Email & Conversion</h3><p>Campaign systems, product storytelling and conversion-focused email layouts that communicate quickly and move people to action.</p></div>
-</section>
-</main>
-
-<footer>
-<div class="wrap">
-<div class="footer-big">Have a product<br>worth designing?</div>
-<div class="footer-row"><span>© 2026 designlake.</span><div class="footer-links"><a href="mailto:hello@designlake.design">Email ↗</a><a href="#">Behance ↗</a><a href="#">Dribbble ↗</a></div></div>
-</div>
-</footer>
-
-<div class="modal" id="modal">
-<div class="modal-inner">
-<button class="close" id="close">×</button>
-<div class="case-head"><div class="case-kicker" id="caseKicker"></div><h2 id="caseTitle"></h2><p id="caseDesc"></p></div>
-<div class="case-content"><div class="case-image"><img id="caseImg" src="" alt=""></div><div class="case-notes"><h3>Design thinking</h3><p id="caseNotes"></p></div></div>
-</div>
-</div>
-
-<script>
-const projects=[...document.querySelectorAll('.project')];
-const filters=[...document.querySelectorAll('.filter')];
-const modal=document.getElementById('modal');
-const close=document.getElementById('close');
-
-filters.forEach(btn=>btn.addEventListener('click',()=>{
-  filters.forEach(x=>x.classList.remove('active')); btn.classList.add('active');
-  const f=btn.dataset.filter;
-  projects.forEach(p=>p.style.display=(f==='all'||p.dataset.type===f)?'':'none');
-}));
-
-projects.forEach(p=>p.addEventListener('click',()=>{
-  document.getElementById('caseTitle').textContent=p.dataset.title;
-  document.getElementById('caseKicker').textContent=p.dataset.kicker;
-  document.getElementById('caseDesc').textContent=p.dataset.desc;
-  document.getElementById('caseImg').src=p.dataset.img;
-  document.getElementById('caseNotes').textContent=p.dataset.desc + " The layout is intentionally restrained: one dominant message, a clear visual anchor and repeated CTA moments only where they help the reader make a decision.";
-  modal.classList.add('open'); document.body.style.overflow='hidden';
-}));
-function closeModal(){modal.classList.remove('open');document.body.style.overflow=''}
-close.addEventListener('click',closeModal);
-modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
-</script>
-</body>
-</html>
+</head><body>
+<header class="wrap"><nav><a class="logo" href="#">designlake.</a><div class="navlinks"><a href="#work">Work</a><a href="#about">About</a><a href="#services">Services</a></div><a class="contact" href="mailto:hello@designlake.design">Let's talk ↗</a></nav></header>
+<main><section class="wrap hero"><div class="eyebrow">Product Designer · UI / UX · Digital Experiences</div><h1>I design products<br>people <span>remember.</span></h1><div class="hero-bottom"><p class="intro">I turn complex ideas into simple, useful and expressive digital experiences — from SaaS platforms and mobile apps to emails that make people stop scrolling.</p><div class="scroll">↓ Scroll to explore</div></div></section>
+<section id="work" class="wrap"><div class="section-head"><h2>Selected work</h2><p>Apps · SaaS · Email · Web</p></div><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="email">Email</button><button class="filter" data-filter="app">Apps</button><button class="filter" data-filter="saas">SaaS</button></div><div class="work-grid">
+<article class="project" data-type="saas" onclick="location.href='parthtech.html'"><div class="project-preview parth-preview"><span class="badge">Brand + Product</span><div class="parth-logo"><span class="markx"><i></i><i></i><i></i><b></b></span><span>Parth<span>Tech</span></span></div><div class="parth-grid"></div><span class="project-arrow">↗</span></div><div class="meta"><div><h3>ParthTech — Brand Identity</h3><p>Brand system · Product story · Digital experience</p></div><span class="year">2026</span></div></article>
+<article class="project" data-type="email" data-title="CloudSense — Smooth Skin" data-kicker="Email · Direct Response" data-desc="A bold beauty-product email built around a clear problem → proof → process → product narrative. The purple visual system creates instant category recognition while the large product hero gives the campaign a strong stopping point." data-img="tanyera-cloudsense.png"><div class="project-preview"><span class="badge">Email</span><img src="tanyera-cloudsense.png"><span class="project-arrow">↗</span></div><div class="meta"><div><h3>CloudSense — Smooth Skin</h3><p>Direct response · Product storytelling</p></div><span class="year">2026</span></div></article>
+<article class="project" data-type="email" data-title="Bare Essence — September Offer" data-kicker="Email · Promotional" data-desc="An offer-led subscription campaign that uses a seasonal hook, repeated promo code and product-led imagery to keep the reader oriented toward one action. The curved sections create rhythm without adding visual clutter." data-img="bareessence-september.png"><div class="project-preview"><span class="badge">Email</span><img src="bareessence-september.png"><span class="project-arrow">↗</span></div><div class="meta"><div><h3>Bare Essence — September</h3><p>Promotion · Subscription · Conversion</p></div><span class="year">2026</span></div></article>
+<article class="project" data-type="email" data-title="Bare Essence — Honest Timeline" data-kicker="Email · Education" data-desc="A trust-building product education email. Instead of overpromising immediate results, the design turns the expected timeline into a simple visual story, then closes with product benefits and a single CTA." data-img="bareessence-timeline.png"><div class="project-preview"><span class="badge">Email</span><img src="bareessence-timeline.png"><span class="project-arrow">↗</span></div><div class="meta"><div><h3>Bare Essence — Timeline</h3><p>Education · Trust · Product benefits</p></div><span class="year">2026</span></div></article>
+<article class="project" data-type="email" data-title="Bulk Buy USA — Seller Outreach" data-kicker="Email · B2B" data-desc="A B2B outreach email designed for fast scanning. Strong navy typography, orange action points and a structured inventory checklist make a dense operational message feel easy to navigate." data-img="bulkbuy-outreach.png"><div class="project-preview"><span class="badge">Email</span><img src="bulkbuy-outreach.png"><span class="project-arrow">↗</span></div><div class="meta"><div><h3>Bulk Buy USA — Outreach</h3><p>B2B · Information hierarchy · Lead generation</p></div><span class="year">2026</span></div></article>
+<article class="project" data-type="email" data-title="Bulk Buy USA — Trust Builder" data-kicker="Email · B2B Brand" data-desc="A credibility-focused email that translates operational strengths into three memorable proof points: discretion, speed and network. The visual hierarchy supports a professional B2B audience without feeling corporate-heavy." data-img="bulkbuy-trust.png"><div class="project-preview"><span class="badge">Email</span><img src="bulkbuy-trust.png"><span class="project-arrow">↗</span></div><div class="meta"><div><h3>Bulk Buy USA — Trust</h3><p>B2B · Brand credibility · Conversion</p></div><span class="year">2026</span></div></article>
+<article class="project" data-type="email" data-title="Yellow Lotus — Flash Sale" data-kicker="Email · Ecommerce" data-desc="A retail promotional email where urgency does the heavy lifting. The large sale headline, compact product cards and repeated CTA create a straightforward path from offer discovery to shopping." data-img="yellowlotus-flash-sale.png"><div class="project-preview"><span class="badge">Email</span><img src="yellowlotus-flash-sale.png"><span class="project-arrow">↗</span></div><div class="meta"><div><h3>Yellow Lotus — Flash Sale</h3><p>Ecommerce · Promotion · Urgency</p></div><span class="year">2026</span></div></article>
+<article class="project" data-type="email" data-title="Yellow Lotus — Curated Comfort" data-kicker="Email · Editorial Ecommerce" data-desc="A lifestyle-led ecommerce email designed more like a magazine spread than a catalogue. Editorial imagery introduces the collection, while curated categories and one featured product keep the experience aspirational and easy to browse." data-img="yellowlotus-editorial.png"><div class="project-preview"><span class="badge">Email</span><img src="yellowlotus-editorial.png"><span class="project-arrow">↗</span></div><div class="meta"><div><h3>Yellow Lotus — Curation</h3><p>Editorial · Ecommerce · Art direction</p></div><span class="year">2026</span></div></article>
+<article class="project" data-type="email" data-title="GlowTrim — Social Proof" data-kicker="Email · Testimonial" data-desc="A testimonial-driven campaign built around a simple conversion idea: one customer story becomes a larger pattern of social proof. The review grid, rating score and final CTA reinforce confidence before the click." data-img="glowtrim-testimonials.png"><div class="project-preview"><span class="badge">Email</span><img src="glowtrim-testimonials.png"><span class="project-arrow">↗</span></div><div class="meta"><div><h3>GlowTrim — Social Proof</h3><p>Testimonials · Conversion · Storytelling</p></div><span class="year">2026</span></div></article>
+<article class="project" data-type="app" data-title="Event — Event Details" data-kicker="Product UI · Mobile App" data-desc="A mobile event-details experience focused on glanceable information: date, place, invitees, notes and sharing. The interface uses familiar iOS patterns and a calm hierarchy so the event remains the hero." data-img="event-detail.png"><div class="project-preview"><span class="badge">App</span><img src="event-detail.png"><span class="project-arrow">↗</span></div><div class="meta"><div><h3>Event — Details</h3><p>Mobile UX · Information hierarchy · iOS UI</p></div><span class="year">2026</span></div></article>
+<article class="project" data-type="app" data-title="Event — Create New" data-kicker="Product UI · Mobile App" data-desc="A creation flow that brings event, reminder and occasion inputs into one flexible form. The design prioritizes progressive disclosure and familiar iOS controls while keeping the Save action persistent and obvious." data-img="event-create.png"><div class="project-preview"><span class="badge">App</span><img src="event-create.png"><span class="project-arrow">↗</span></div><div class="meta"><div><h3>Event — Create</h3><p>UX flow · Form design · Mobile UI</p></div><span class="year">2026</span></div></article>
+</div></section>
+<section id="about" class="wrap statement"><small>01 / Approach</small><h2>Less noise.<br><em>More signal.</em><br>Better products.</h2></section>
+<section id="services" class="wrap services"><div class="section-head"><h2>What I do</h2><p>End-to-end product design</p></div><div class="service"><span class="num">01</span><h3>Product Design</h3><p>From rough product ideas to polished interfaces, I shape flows, systems and experiences around real user needs.</p></div><div class="service"><span class="num">02</span><h3>UI / UX</h3><p>Clear information architecture, interaction design and visual systems that make complex products feel obvious.</p></div><div class="service"><span class="num">03</span><h3>Email & Conversion</h3><p>Campaign systems, product storytelling and conversion-focused email layouts that communicate quickly and move people to action.</p></div></section></main>
+<footer><div class="wrap"><div class="footer-big">Have a product<br>worth designing?</div><div class="footer-row"><span>© 2026 designlake.</span><div class="footer-links"><a href="mailto:hello@designlake.design">Email ↗</a><a href="#">Behance ↗</a><a href="#">Dribbble ↗</a></div></div></div></footer>
+<div class="modal" id="modal"><div class="modal-inner"><button class="close" id="close">×</button><div class="case-head"><div class="case-kicker" id="caseKicker"></div><h2 id="caseTitle"></h2><p id="caseDesc"></p></div><div class="case-content"><div class="case-image"><img id="caseImg" src="" alt=""></div><div class="case-notes"><h3>Design thinking</h3><p id="caseNotes"></p></div></div></div></div>
+<script>const projects=[...document.querySelectorAll('.project')],filters=[...document.querySelectorAll('.filter')],modal=document.getElementById('modal'),close=document.getElementById('close');filters.forEach(btn=>btn.addEventListener('click',()=>{filters.forEach(x=>x.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;projects.forEach(p=>p.style.display=(f==='all'||p.dataset.type===f)?'':'none')}));projects.forEach(p=>p.addEventListener('click',()=>{if(p.dataset.title){document.getElementById('caseTitle').textContent=p.dataset.title;document.getElementById('caseKicker').textContent=p.dataset.kicker;document.getElementById('caseDesc').textContent=p.dataset.desc;document.getElementById('caseImg').src=p.dataset.img;document.getElementById('caseNotes').textContent=p.dataset.desc+' The layout is intentionally restrained: one dominant message, a clear visual anchor and repeated CTA moments only where they help the reader make a decision.';modal.classList.add('open');document.body.style.overflow='hidden'}}));function closeModal(){modal.classList.remove('open');document.body.style.overflow=''}close.addEventListener('click',closeModal);modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});</script>
+</body></html>
